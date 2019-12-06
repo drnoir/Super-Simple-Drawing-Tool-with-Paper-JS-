@@ -3,3 +3,5 @@
  create line drawings with 3 different widths using the keyboard
  change the line colour to red with spacebar
  made as a tutorial in basic paper js usage by Chris Godber Dec 2019
+
+![Alt text](drawingtool.jpg?raw=true "Super Simple Drawing Tool")
