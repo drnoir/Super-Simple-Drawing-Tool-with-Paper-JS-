@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Super Simple Drawing Tool with Paper JS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/paper-full.min.js"></script>
+    <script type="text/paperscript" canvas="canvas">
+        var myPath;
+
+        function onMouseDown(event) {
+            myPath = new Path();
+            myPath.strokeColor = 'black';
+            myPath.strokeWidth =5;
+        }
+        
+        function onMouseDrag(event) {
+            myPath.add(event.point);
+        }
+
+        tool.onKeyDown = function(event) {
+            if (event.key == '1') {
+                // Scale the path  to 10
+                myPath.strokeWidth = 10;
+        
+                // Prevent the key event from bubbling
+                return false;
+            }
+
+            if (event.key == '2') {
+                // Scale the path to 15
+                myPath.strokeWidth = 15;
+        
+                // Prevent the key event from bubbling
+                return false;
+            }
+
+            if (event.key == '3') {
+                // Scale the path to 30
+                myPath.strokeWidth = 30;
+        
+                // Prevent the key event from bubbling
+                return false;
+            }
+
+            if (event.key == 'space') {
+                // change the stroke color to red:
+                myPath.strokeColor = 'red';
+        
+                // Prevent the key event from bubbling
+                return false;
+            }
+
+
+        }
+        
+   
+        
+    </script>
+</head>
+<body>
+    <h2>Super Simple Drawing Tool with Paper JS by <a href ="http://www.chrisgodber.co.uk">Chris Godber</a></h2>
+    <p>Click and move your mouse to draw a line - press 1 ,2 and 3 to change the size, spacebar to change colour to red</p>
+    <p>Have Fun!</p>
+    <canvas id="canvas" resize></canvas>
+</body>
+</html>

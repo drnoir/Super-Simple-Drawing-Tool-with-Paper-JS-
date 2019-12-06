@@ -1,0 +1,22 @@
+html,
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+    font-family: fantasy;
+}
+
+h2, p{
+    text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color:red;
+}
+/* Scale canvas with resize attribute to full size */
+canvas[resize] {
+    width: 100%;
+    height: 100%;
+    border:solid 1px black;
+}
